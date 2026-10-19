@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mëso Historinë – Libra për fëmijë në shqip</title>
+<meta name="description" content="Libra me ilustrime në shqip për fëmijë 4–8 vjeç · Livres illustrés en albanais pour enfants de 4 à 8 ans.">
+<meta property="og:title" content="Mëso Historinë">
+<meta property="og:description" content="Libra me ilustrime në shqip për fëmijë 4–8 vjeç · Apprends l'histoire">
+<meta property="og:image" content="https://livres.usagesia.com/assets/rugova.jpg">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+@font-face{font-family:"Baloo 2";src:url(assets/baloo2.ttf) format("truetype");font-weight:400 800;font-display:swap}
+@font-face{font-family:"Nunito";src:url(assets/nunito.ttf) format("truetype");font-weight:200 1000;font-display:swap}
+:root{--cream:#fbf3e2;--paper:#fffaf0;--ink:#3b2a1e;--red:#b8232f;--gold:#e8a93b;--muted:#7a6352}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Nunito,system-ui,sans-serif;line-height:1.5}
+header{text-align:center;padding:2rem 1.2rem 1.2rem;background:radial-gradient(ellipse at top,#fde6b8,var(--cream) 70%)}
+.logo{width:72px;height:72px;border-radius:50%;border:3px solid #fff;box-shadow:0 3px 10px #0002}
+h1{font-family:"Baloo 2";font-weight:800;font-size:2.4rem;margin:.4rem 0 0;line-height:1.1}
+.tag{margin:.3rem 0 0;font-weight:700}
+.tag-fr{margin:0;color:var(--muted);font-style:italic}
+main{max-width:1000px;margin:0 auto;padding:1rem}
+.grid{display:grid;gap:1.4rem;grid-template-columns:1fr}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr}h1{font-size:3rem}}
+.card{background:var(--paper);border-radius:18px;overflow:hidden;box-shadow:0 4px 18px #5a3a1a22;display:flex;flex-direction:column;position:relative}
+.card img{width:100%;height:auto;flex:none;align-self:stretch;display:block}
+.new{position:absolute;top:12px;left:12px;background:var(--red);color:#fff;font-weight:800;border-radius:99px;padding:.2rem .8rem;font-size:.85rem}
+.body{padding:1rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.card h2{font-family:"Baloo 2";font-size:1.4rem;margin:0;line-height:1.2}
+.fr{color:var(--muted);font-style:italic;margin:0}.sq{margin:0}
+.buy{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.6rem}
+.price{font-family:"Baloo 2";font-weight:800;font-size:1.5rem}
+.btn{background:var(--red);color:#fff;text-decoration:none;font-weight:800;padding:.75rem 1.3rem;border-radius:99px;font-size:1.05rem}
+.btn:active{transform:scale(.97)}
+.info{margin:2rem auto 0;background:var(--paper);border-radius:18px;padding:1.2rem;font-size:.95rem}
+.info p{margin:.3rem 0}
+footer{text-align:center;padding:2rem 1rem 3rem}
+.ig{display:inline-block;color:var(--ink);font-weight:800;text-decoration:none;border:2px solid var(--ink);border-radius:99px;padding:.5rem 1.2rem}
+</style>
+</head>
+<body>
+<header>
+  <img class="logo" src="assets/apple-touch-icon.png" alt="">
+  <h1>Mëso Historinë</h1>
+  <p class="tag">Libra me ilustrime në shqip për fëmijë 4–8 vjeç</p>
+  <p class="tag-fr">Apprends l'histoire · Livres illustrés en albanais, 4–8 ans</p>
+</header>
+<main>
+  <div class="grid" id="books"></div>
+  <section class="info">
+    <p>📦 <b>Dërgesa:</b> librat shtypen dhe dërgohen nga partneri ynë i shtypit (Lulu). Pagesa bëhet në faqen e tyre. Për momentin dërgesa në Kosovë nuk është e mundur.</p>
+    <p class="fr">📦 <b>Livraison :</b> les livres sont imprimés et expédiés par notre partenaire d'impression (Lulu). Le paiement se fait sur leur site. La livraison au Kosovo n'est pas encore possible.</p>
+    <p>📖 Kopertinë e fortë, 24 faqe · Couverture rigide, 24 pages</p>
+  </section>
+</main>
+<footer>
+  <a class="ig" href="https://www.instagram.com/mesohistorine/" target="_blank" rel="noopener">📸 @mesohistorine</a>
+</footer>
+<script src="books.js"></script>
+<script>
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+document.getElementById("books").innerHTML=(window.BOOKS||[]).map(b=>`
+<article class="card">
+  ${b.isNew?'<span class="new">E re · Nouveau</span>':''}
+  <img src="${esc(b.cover)}" alt="${esc(b.title)}" loading="lazy" width="900" height="827">
+  <div class="body">
+    <h2>${esc(b.title)}</h2>
+    <p class="sq">${esc(b.sq)}</p>
+    <p class="fr">${esc(b.fr)}</p>
+    <div class="buy"><span class="price">${esc(b.price)}</span>
+    <a class="btn" href="${esc(b.url)}" target="_blank" rel="noopener">Bli / Acheter</a></div>
+  </div>
+</article>`).join("");
+</script>
+</body>
+</html>
