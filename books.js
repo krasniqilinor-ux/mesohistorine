@@ -2,14 +2,23 @@
 // Pour ajouter un livre : copier un bloc, changer les champs, mettre la couverture dans assets/.
 window.BOOKS = [
   {
+    title: "Abetarja – Shkronjat tona",
+    cover: "assets/abetarja.jpg",
+    sq: "Si lindi alfabeti ynë? Leka i vogël në Kongresin e Manastirit, 1908.",
+    fr: "Comment est né l'alphabet albanais ? Le petit Leka au Congrès de Manastir, en 1908.",
+    de: "Wie entstand das albanische Alphabet? Der kleine Leka beim Kongress von Manastir, 1908.",
+    price: "19,90 €",
+    url: "https://www.lulu.com/shop/nol-krasniqi/abetarja-shkronjat-tona/hardcover/product-zmv6me5.html",
+    isNew: true
+  },
+  {
     title: "Ibrahim Rugova – Njeriu i Paqes",
     cover: "assets/rugova.jpg",
     sq: "Historia e njeriut që mbrojti Kosovën me fjalë dhe me paqe.",
     fr: "L'histoire de l'homme qui a défendu le Kosovo par les mots et la paix.",
     de: "Die Geschichte des Mannes, der den Kosovo mit Worten und mit Frieden verteidigte.",
     price: "19,90 €",
-    url: "https://www.lulu.com/shop/nol-krasniqi/ibrahim-rugova-njeriu-i-paqes/hardcover/product-dy7vezp.html",
-    isNew: true
+    url: "https://www.lulu.com/shop/nol-krasniqi/ibrahim-rugova-njeriu-i-paqes/hardcover/product-dy7vezp.html"
   },
   {
     title: "Skënderbeu – Heroi i Shqipërisë",
