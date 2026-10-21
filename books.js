@@ -2,14 +2,23 @@
 // Pour ajouter un livre : copier un bloc, changer les champs, mettre la couverture dans assets/.
 window.BOOKS = [
   {
+    title: "Nënë Tereza – Zemra e Mirësisë",
+    cover: "assets/tereza.jpg",
+    sq: "Gonxhja e vogël nga Shkupi, që u bë Nënë Tereza: një histori për mirësinë.",
+    fr: "La petite Gonxhe de Skopje, devenue Mère Teresa : une histoire de bonté.",
+    de: "Die kleine Gonxhe aus Skopje, die zu Mutter Teresa wurde: eine Geschichte über Güte.",
+    price: "19,90 €",
+    url: "https://www.lulu.com/shop/nol-krasniqi/n%C3%ABn%C3%AB-tereza-zemra-e-mir%C3%ABsis%C3%AB/hardcover/product-2mgzvqj.html",
+    isNew: true
+  },
+  {
     title: "Abetarja – Shkronjat tona",
     cover: "assets/abetarja.jpg",
     sq: "Si lindi alfabeti ynë? Leka i vogël në Kongresin e Manastirit, 1908.",
     fr: "Comment est né l'alphabet albanais ? Le petit Leka au Congrès de Manastir, en 1908.",
     de: "Wie entstand das albanische Alphabet? Der kleine Leka beim Kongress von Manastir, 1908.",
     price: "19,90 €",
-    url: "https://www.lulu.com/shop/nol-krasniqi/abetarja-shkronjat-tona/hardcover/product-zmv6me5.html",
-    isNew: true
+    url: "https://www.lulu.com/shop/nol-krasniqi/abetarja-shkronjat-tona/hardcover/product-zmv6me5.html"
   },
   {
     title: "Ibrahim Rugova – Njeriu i Paqes",
